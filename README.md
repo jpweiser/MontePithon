@@ -15,3 +15,11 @@ with dimensions that match the diameter are considered. A number of random coord
 conditional statement. If the random coordinate falls within the circle based on a right handed rectangular
 Cartesian coordinate system. then one is added to the total of successes. In the end, this number of successes
 is compared to the total number of random coordinates. The result should yield an approximation of π.
+
+Running the Program:
+
+Requirements: Python 3.x
+
+From terminal:
+
+    python MontePithon.py
