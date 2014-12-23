@@ -2,17 +2,18 @@
 
 from random import random
 
+#range
 a = -1
 b = 1
 
 for i in range(6):
-    Nu = 0;
-    for N in range(pow(10,i)):
-        x = a + random()*(b-a);
-        y = random();
-        if (x*x+y*y <=1):
-            Nu += 1
+    hit = 0;
+    for total in range(pow(10,i)):
+        x = a + random()*(b-a); # x coord
+        y = random(); # y coord
+        if (x*x+y*y <=1): # if in circle
+            hit += 1
 
-    if N > 0:
-        pi = (Nu/N)*(b-a)*2;
-        print(N, " iterations produces a value of " ,pi)
+    if total > 0:
+        pi = (hit/total)*(b-a)*2;
+        print(total, " iterations produces a value of " ,pi)
