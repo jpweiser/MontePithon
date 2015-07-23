@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import argparse, sys
+import argparse, sys, math
 from montepithon import MontePithon
 
 def _parseArgs(args=sys.argv[1:]):
@@ -29,9 +29,12 @@ def main():
 
     if parsed.verbose:
         print 'Circle radius: ' + str(parsed.radius)
-        print 'Appoximation after ' + str(parsed.iterations) + ' iterations:'
-
-    print str(pi)
+        print 'Appoximation after ' + str(parsed.iterations) + ' iterations: ' \
+              + str(pi)
+        print 'Relative error: ' + str(abs(math.pi - pi)/math.pi * 100) \
+              + '%'
+    else:
+        print str(pi)
 
     if parsed.plot:
         mp.piplot()
