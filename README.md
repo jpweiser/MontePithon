@@ -18,7 +18,7 @@ is compared to the total number of random coordinates. The result should yield a
 
 Running the Program:
 
-Requirements: Python 3.x
+Requirements: Python 2.x
 
 From terminal:
 
