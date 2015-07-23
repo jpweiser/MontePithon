@@ -11,8 +11,10 @@ def _parseArgs(args=sys.argv[1:]):
                                       to approximate PI.")
     parser.add_argument('-i',"--iterations", action='store', type=int,default=100000,
                          help="Number of iterations to use for approximation")
-    parser.add_argument('-r',"--radius", action='store', default=1,
+    parser.add_argument('-r',"--radius", action='store', type=float, default=1,
                          help="Radius of circle to use for integration")
+    parser.add_argument('-p',"--plot", action='store_true',
+                         help='Plot result')
     parser.add_argument('-v',"--verbose", action='store_true',
                          help='Toggle verbose output')
 
@@ -30,6 +32,9 @@ def main():
         print 'Appoximation after ' + str(parsed.iterations) + ' iterations:'
 
     print str(pi)
+
+    if parsed.plot:
+        mp.piplot()
 
 
 if __name__ == '__main__':
