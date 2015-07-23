@@ -16,10 +16,34 @@ conditional statement. If the random coordinate falls within the circle based on
 Cartesian coordinate system. then one is added to the total of successes. In the end, this number of successes
 is compared to the total number of random coordinates. The result should yield an approximation of π.
 
-Running the Program:
+##Installation
+Clone this repository
+
+    git clone git@github.com:jpweiser/MontePithon.git
+    
+Change to program directory
+
+    cd MontePithon
+    
+##Running the Program
 
 Requirements: Python 2.x
 
 From terminal:
 
-    python MontePithon.py
+    python main.py
+    
+## Usage
+    
+    usage: main.py [-h] [-i ITERATIONS] [-r RADIUS] [-p] [-v]
+
+    Use Monte Carlo integration to approximate PI.
+
+    optional arguments:
+      -h, --help            show this help message and exit
+      -i ITERATIONS, --iterations ITERATIONS
+                            Number of iterations to use for approximation
+      -r RADIUS, --radius RADIUS
+                            Radius of circle to use for integration
+      -p, --plot            Plot result
+      -v, --verbose         Toggle verbose output
