@@ -11,6 +11,9 @@ class MontePithon(object):
         self.radius = radius
         self.iterations = iterations
         self.coordinates = []
+        self.hits = []
+        self.misses = []
+        self.approximation = self.approximate()
 
     def random_coord(self):
         return random.uniform(-self.radius, self.radius)
@@ -18,9 +21,12 @@ class MontePithon(object):
     def piplot(self):
         if self.iterations == 0:
             return
-        plt.scatter(*zip(*self.coordinates))
+        plt.scatter(*zip(*self.hits),c='r')
+        plt.scatter(*zip(*self.misses))
         plt.gcf().gca().add_artist(plt.Circle((0,0),self.radius,color='r',
                                    alpha=.25))
+        plt.axis('equal')
+        plt.axis([-self.radius,self.radius,-self.radius,self.radius])
         plt.show()
 
     def approximate(self):
@@ -34,5 +40,8 @@ class MontePithon(object):
             self.coordinates.append((x,y))
             if hypot(x, y) < self.radius: # if in circle
                 hit += 1
+                self.hits.append((x,y))
+            else:
+                self.misses.append((x,y))
 
         return (hit/total)*4 # h/m * 2 * Diameter
