@@ -21,12 +21,18 @@ class MontePithon(object):
     def piplot(self):
         if self.iterations == 0:
             return
+        caption = "Pi apprx. " + str(self.approximation) + " after " \
+                + str(self.iterations) + " iterations"
         plt.scatter(*zip(*self.hits),c='r')
         plt.scatter(*zip(*self.misses))
         plt.gcf().gca().add_artist(plt.Circle((0,0),self.radius,color='r',
                                    alpha=.25))
         plt.axis('equal')
         plt.axis([-self.radius,self.radius,-self.radius,self.radius])
+        plt.title("Monte Pithon")
+        plt.xlabel("x")
+        plt.ylabel("y")
+        plt.figtext(.015,.015,caption)
         plt.show()
 
     def approximate(self):
