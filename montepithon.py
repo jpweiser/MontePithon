@@ -16,6 +16,8 @@ class MontePithon(object):
         return random.uniform(-self.radius, self.radius)
 
     def piplot(self):
+        if self.iterations == 0:
+            return
         plt.scatter(*zip(*self.coordinates))
         plt.gcf().gca().add_artist(plt.Circle((0,0),self.radius,color='r',
                                    alpha=.25))
@@ -33,4 +35,4 @@ class MontePithon(object):
             if hypot(x, y) < self.radius: # if in circle
                 hit += 1
 
-        return (hit/total)*4*self.radius # h/m * 2 * Diameter
+        return (hit/total)*4 # h/m * 2 * Diameter
