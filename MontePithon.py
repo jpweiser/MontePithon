@@ -1,19 +1,28 @@
-#!/bin/python
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
-from random import random
+import random
 from math import hypot
 
-# Assume the radius of the circle be 1
-radius = 1
+class MontePithon(object):
+    def __init__(self, iterations=100000,radius=1):
+        self.radius = radius
+        self.iterations = iterations
+        self.coordinates = []
 
-# Demonstrate how the number of random points used improves the approximation
-# value
-for i in range(7):
-    hit = 0;
-    for total in range(pow(10,i) + 1):
-        if (hypot(random(), random()) < radius): # if in circle
-            hit += 1
+    def random_coord(self):
+        return random.uniform(-self.radius, self.radius)
 
-    if total > 0: # prevent division by zero
-        pi = (hit/total)*4*radius # h/m * 2 * Diameter
-        print(total, " iterations produces a value of " ,pi)
+    def approximate(self):
+        if self.iterations == 0:
+            return 0
+
+        hit = 0.
+        for total in range(self.iterations + 1):
+            x = self.random_coord()
+            y = self.random_coord()
+            self.coordinates.append((x,y))
+            if hypot(x, y) < self.radius: # if in circle
+                hit += 1
+
+        return (hit/total)*4*self.radius # h/m * 2 * Diameter
