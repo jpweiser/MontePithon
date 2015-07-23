@@ -3,6 +3,8 @@
 
 import random
 from math import hypot
+import matplotlib.pyplot as plt
+import numpy as np
 
 class MontePithon(object):
     def __init__(self, iterations=100000,radius=1):
@@ -12,6 +14,12 @@ class MontePithon(object):
 
     def random_coord(self):
         return random.uniform(-self.radius, self.radius)
+
+    def piplot(self):
+        plt.scatter(*zip(*self.coordinates))
+        plt.gcf().gca().add_artist(plt.Circle((0,0),self.radius,color='r',
+                                   alpha=.25))
+        plt.show()
 
     def approximate(self):
         if self.iterations == 0:
