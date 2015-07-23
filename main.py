@@ -25,7 +25,7 @@ def main():
     parsed = _parseArgs()
 
     mp = MontePithon(parsed.iterations,parsed.radius)
-    pi = mp.approximate()
+    pi = mp.approximation
 
     if parsed.verbose:
         print 'Circle radius: ' + str(parsed.radius)
