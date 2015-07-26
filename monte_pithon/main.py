@@ -4,7 +4,7 @@
 """
 
 import argparse, sys, math
-from .monte import MontePithon
+from .monte_pithon import MontePithon
 
 def _parse_args(args=sys.argv[1:]):
     """Setup argparser to process arguments and generate help"""
