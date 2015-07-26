@@ -1,0 +1,7 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""Script to run demonstation"""
+from monte_pithon import main
+
+if __name__ == '__main__':
+    main()
