@@ -11,11 +11,11 @@ config = {
     'url': 'https://github.com/jpweiser/MontePithon',
     'download_url': 'https://github.com/jpweiser/MontePithon/tarball/master',
     'author_email': 'jon@jpweiser.com',
-    'version': '0.02.1b',
+    'version': '0.02.2',
     'install_requires': ['matplotlib'],
     'packages': ['monte_pithon'],
     'scripts': ['bin/monte-pithon'],
-    'name': 'monte_pithon',
+    'name': 'Monte Pithon',
     'classifiers' : [
         "Environment :: Console",
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
