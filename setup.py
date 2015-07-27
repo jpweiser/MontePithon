@@ -15,7 +15,7 @@ config = {
     'install_requires': ['matplotlib'],
     'packages': ['monte_pithon'],
     'scripts': ['bin/monte-pithon'],
-    'name': 'Monte Pithon',
+    'name': 'MontePithon',
     'classifiers' : [
         "Environment :: Console",
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
