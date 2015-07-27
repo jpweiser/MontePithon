@@ -17,7 +17,7 @@ def _parse_args(args=sys.argv[1:]):
                         help="Radius of circle to use for integration")
     parser.add_argument('-p', "--plot", action='store_true',
                         help='Plot result')
-    parser.add_argument('-v', "--verbose", action='store_true',
+    parser.add_argument('-v', "--verbose",action='store_true',
                         help='Toggle verbose output')
 
     return parser.parse_args(args)
