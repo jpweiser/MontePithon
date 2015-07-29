@@ -31,7 +31,8 @@ Requirements: Python 2.x
 
 From terminal:
 
-    python main.py
+    cd bin
+    ./monte-pithon
     
 ## Usage
     
