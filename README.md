@@ -1,6 +1,8 @@
 MontePithon
 ===========
 
+##Introduction
+
 Implementing Monte Carlo integration to calculate an approximation of π
 
 π is a mathematical constant, representing the ratio of a circle’s circumference to its diameter. It is an
