@@ -1,7 +1,7 @@
 MontePithon
 ===========
 
-##Introduction
+## Introduction
 
 Implementing Monte Carlo integration to calculate an approximation of π
 
@@ -18,7 +18,7 @@ conditional statement. If the random coordinate falls within the circle based on
 Cartesian coordinate system. then one is added to the total of successes. In the end, this number of successes
 is compared to the total number of random coordinates. The result should yield an approximation of π.
 
-##Installation
+# Installation
 Clone this repository
 
     git clone git@github.com:jpweiser/MontePithon.git
@@ -27,7 +27,7 @@ Change to program directory
 
     cd MontePithon
     
-##Running the Program
+## Running the Program
 
 Requirements: Python 2.x
 
